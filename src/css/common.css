@@ -19,13 +19,13 @@ img {
 
 .timer {
   display: flex;
-  justify-content: center;
   text-align: center;
   gap: 8px;
 }
 
 .field {
   padding: 12px;
-  background: #6ef0d4;
   border-radius: 2px;
+  font-size: x-large;
+  font-family: cursive;
 }
