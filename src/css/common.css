@@ -16,3 +16,16 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.field {
+  padding: 12px;
+  background: #6ef0d4;
+  border-radius: 2px;
+}
