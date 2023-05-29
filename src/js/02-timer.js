@@ -27,11 +27,10 @@ const options = {
     chosenDate = selectedDates[0].getTime();
     if (chosenDate < currentDate) {
       refs.startBtn.disabled = true;
-      
       Notiflix.Notify.failure('Please choose a date in the future');
     } else if (refs.input.value.trim() !== '') {
       refs.startBtn.disabled = false;
-      refs.input.disabled = true;
+      
       Notiflix.Notify.success('Correct date :)');
     }
   },
@@ -63,6 +62,8 @@ function countDown() {
 
     }
   }, 1000);
+  refs.input.disabled = true;
+  refs.startBtn.disabled = true;
 }
 
 function convertMs(ms) {
