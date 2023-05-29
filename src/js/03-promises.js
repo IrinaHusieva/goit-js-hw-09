@@ -40,7 +40,8 @@ function runPromises(event) {
       .catch(({ position, delay }) => {
       Notiflix.Notify.failure(`❌ Rejected promise ${position + 1} in ${delay}ms`);
       
-    });
+      });
+    refs.form.reset();
   }
   
 };

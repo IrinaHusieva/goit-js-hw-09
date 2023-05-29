@@ -16,6 +16,7 @@ let currentDate = new Date().getTime();
 let intervalId = 0;
 
 refs.startBtn.addEventListener('click', countDown);
+refs.startBtn.disabled = true;
 
 const options = {
   enableTime: true,
@@ -26,9 +27,11 @@ const options = {
     chosenDate = selectedDates[0].getTime();
     if (chosenDate < currentDate) {
       refs.startBtn.disabled = true;
+      
       Notiflix.Notify.failure('Please choose a date in the future');
     } else if (refs.input.value.trim() !== '') {
       refs.startBtn.disabled = false;
+      refs.input.disabled = true;
       Notiflix.Notify.success('Correct date :)');
     }
   },
